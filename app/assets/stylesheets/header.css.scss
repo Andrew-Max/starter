@@ -1,7 +1,7 @@
 @import "mixins";
 
 .navbar-wrapper {
-  background: $main-blue;
+  background: black;
 
   .navbar {
     height: 80px;
@@ -23,7 +23,7 @@
           &:hover,
           &:active {
             border: none;
-            background: $main-blue;
+            // background: $main-blue;
             color: white;
           }
         }
@@ -33,7 +33,7 @@
             &:hover,
             &:active {
               border: none;
-              background: $main-blue;
+              // background: $main-blue;
               color: white;
             }
           }
@@ -47,7 +47,7 @@
       }
     }
   }
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background: $main-blue !important;
-  }
+  // .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  //   background: $main-blue !important;
+  // }
 }

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  root 'register_searches#index'
-
   devise_for :users, :skip => [:sessions, :registrations]
-
+  # root to: 'devise/sessions#new'
+  root to: 'users#index'
   as :user do
     get 'login' => 'devise/sessions#new'
     post 'login' => 'devise/sessions#create', as: :create_session
@@ -15,8 +14,7 @@ Rails.application.routes.draw do
 
   end
 
-  resources :register_searches, only: [:index]
-  resources :documents, only: [:create]
+  get 'user_root' => 'users#index', as: :user_root
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
